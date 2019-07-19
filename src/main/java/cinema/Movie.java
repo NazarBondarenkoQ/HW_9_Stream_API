@@ -3,20 +3,20 @@ package main.java.cinema;
 class Movie {
     private String name;
     private String genre;
-    private double price;
+    private int ticketPrice;
 
-    Movie(String name, String genre, double price) {
+    Movie(String name, String genre, int ticketPrice) {
         this.name = name;
         this.genre = genre;
-        this.price = price;
+        this.ticketPrice = ticketPrice;
     }
-
 
     String getGenre() {
-        return genre;
+        return this.genre;
     }
 
-    double getPrice() {
-        return price;
+    int getPrice() {
+        return this.ticketPrice;
     }
 }
+

@@ -1,13 +1,13 @@
 package main.java.boxes;
 
-public class Protector {
+class Protector {
     private Thing thing;
 
-    public Protector(Thing thing) {
+    Protector(Thing thing) {
         this.thing = thing;
     }
 
-    public String getThingName(){
+    String getThingName(){
         return thing.getName();
     }
 }
