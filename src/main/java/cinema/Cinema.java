@@ -24,8 +24,7 @@ public class Cinema {
 
     public void countMoviesByGenre(String genre) {
         long count = movies.stream()
-                        .filter(movie -> movie.getGenre()
-                        .equalsIgnoreCase(genre))
+                        .filter(movie -> movie.getGenre().equalsIgnoreCase(genre))
                         .count() + movies1.stream()
                         .filter(movie -> movie.getGenre().equalsIgnoreCase(genre))
                         .count();
