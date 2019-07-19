@@ -23,12 +23,11 @@ public class Cinema {
     }
 
     public void countMoviesByGenre(String genre) {
-        long count = movies.stream().
-                        filter(Movie -> Movie.getGenre().toUpperCase()
-                        .equals(genre.toUpperCase()))
+        long count = movies.stream()
+                        .filter(movie -> movie.getGenre()
+                        .equalsIgnoreCase(genre))
                         .count() + movies1.stream()
-                        .filter(Movie -> Movie.getGenre().toUpperCase()
-                        .equals(genre.toUpperCase()))
+                        .filter(movie -> movie.getGenre().equalsIgnoreCase(genre))
                         .count();
         System.out.println("In the cinema there are: " + count + " movies in genre \"" + genre + "\"");
     }

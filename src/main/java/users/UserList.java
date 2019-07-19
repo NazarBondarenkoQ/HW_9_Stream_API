@@ -15,7 +15,7 @@ public class UserList {
 
     public void groupUsersByLogin() {
         Map<String, String> collect = users.stream().
-                filter(User -> User.getLoginTime().
+                filter(user -> user.getLoginTime().
                         isAfter(LocalDate.now().minusDays(7)))
                 .collect(Collectors.
                         toMap(User::getTeamName, User::getEmail, (k, v) -> k + v));

@@ -25,8 +25,8 @@ public class Box {
 
     public void protectFragileItems() {
         List<Protector> collect = boxes.stream()
-                .flatMap((box) -> box.stream()
-                        .filter(Thing -> Thing.getCondition() == Conditions.FRAGILE)
+                .flatMap(box -> box.stream()
+                        .filter(thing -> thing.getCondition() == Conditions.FRAGILE)
                         .map(Protector::new)).collect(Collectors.toList());
         System.out.print("List of protected items: [ ");
         for (Protector protector : collect) {
